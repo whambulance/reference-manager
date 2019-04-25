@@ -11,7 +11,7 @@ Imports EPDM.Interop
 
 Partial Public Class MainForm
 
-    Dim SoftVer As String = "Version 4.3.190118"
+    Dim SoftVer As String = "Version 4.4.190425"
 
     Private vault1 As IEdmVault5 = Nothing
     Dim fileName As String
