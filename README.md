@@ -9,7 +9,21 @@ We had three problems which needed solving:
 * Selecting the newest Issues (files without Issue no.s in the filename)
 * Preventing file duplication
 
-## How does it manage Issue numbers?
+## How does it manage Filenames?
+### Managing Issue/Revision numbers
+A couple of years ago we moved from standard numeric revision (rev 1,2,3,..) to a custom system with a backwards date (rev 190528 would be the date 19-05-28). I needed to ensure that files priotitized the latest revision files, which ultimately turned out to be quite simple:
+
+From newest at the top, to oldest at the bottom:
+1. [190528]
+2. [181205]
+3. [180414]
+4. [4]
+5. [2]
+6. [1]
+
+As you can see from this list, newer revisions are always numerically larger than older revisions - therefore this is the system it uses to determine the latest revision
+
+### Managing Filename Variations
 *It works with two filename variations:*
 
 1. \<filename>.\<extension>
@@ -26,7 +40,7 @@ This system implementing this prioritization assumes the following rules:
 * There **should** only ever be one copy of a file at a time
 * All files required for work **need** to follow **Filename Variation 1**
 * All files required for work **need** to have an Issue property in their metadata
-* Files not required for work can be any of the 3 filename variations listed
+* Files not required for work can be any of the 2 filename variations listed
 
 ## Known bugs
 * Sometimes the dropdowns in the Table glitch and cannot be clicked or hovered over. I think this is because the program is trying to insert an invalid value from a filename or reference. Haven't fixed this yet
