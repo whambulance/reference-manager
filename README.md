@@ -30,7 +30,7 @@ This system implementing this prioritization assumes the following rules:
 
 ## Known bugs
 * Sometimes the dropdowns in the Table glitch and cannot be clicked or hovered over. I think this is because the program is trying to insert an invalid value from a filename or reference. Haven't fixed this yet
-* After re-referencing, mates within assemblies can sometimes be broken - often due to small changes in different models. Our companies legacy filesystem is a mess however, and certaintly doesn't help this.
+* After re-referencing, mates within assemblies can sometimes be broken - often due to small changes in different models. Our companies legacy filesystem is a mess however, and certainly doesn't help this.
 * Error in IDE: Cannot open .resx file - not really a bug but still a problem. Right click on the two files in Explorer and make sure that "Unblock" is checked
 
 ## Improvements I want to make but haven't got round to yet
