@@ -29,7 +29,7 @@ As you can see from this list, newer revisions are always numerically larger tha
 1. \<filename>.\<extension>
 2. \<filename>[\<issue>].\<extension> eg. 'Filename[180924].sldprt'
 
-It selects certain files over others, in the following order:
+It looks for files in a specific order:
 
 1. An exact match of Variation 1
 2. An exact match of Variation 2, with the highest value \<issue> as an integer
@@ -37,10 +37,10 @@ It selects certain files over others, in the following order:
 
 This system implementing this prioritization assumes the following rules:
 
-* There **should** only ever be one copy of a file at a time
+* There **should** only ever be one live copy of a file at a time - this excludes legacy copies
 * All files required for work **need** to follow **Filename Variation 1**
-* All files required for work **need** to have an Issue property in their metadata
-* Files not required for work can be any of the 2 filename variations listed
+* All files required for work **need** to have an "Issue" property in their metadata
+* Files not required for work (legacy files) can be any of the other 2 filename variations listed
 
 ## Known bugs
 * Sometimes the dropdowns in the Table glitch and cannot be clicked or hovered over. I think this is because the program is trying to insert an invalid value from a filename or reference. Haven't fixed this yet
